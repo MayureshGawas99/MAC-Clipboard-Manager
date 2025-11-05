@@ -107,7 +107,6 @@ class ClipboardApp(rumps.App):
         self.menu.add(rumps.MenuItem("Clear History", callback=self.clear_history))
         self.menu.add(rumps.MenuItem("Quit", callback=self.quit_app))
 
-
     def copy_item(self, sender):
         pyperclip.copy(sender.value)
         rumps.notification("Clipboard Manager", "Copied to Clipboard", sender.value[:60])
